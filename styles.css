@@ -2,22 +2,26 @@ html, body {
     /* To use full height of the page*/
     height: 100%;
     margin: 0px;
+    background-color: grey;
 }
 
 .container {
     display: grid;
     grid-template-columns: repeat(64,1fr); 
-    grid-template-columns: repeat(64,1fr);
     grid-column-gap: 0px;
     padding: 25px 25px 25px 25px;
+    border: solid 2px black;
 }
 
 
 .container-item {
     background: yellow;
     width: 100%;
-    height: 100%;
     /*Using the padding property to enforce a 1:1 aspect ratio*/
     height: 0;
     padding-top: 100%;
+}
+
+.black {
+    background-color: black;
 }
