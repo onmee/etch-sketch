@@ -1,27 +1,61 @@
 html, body {
-    /* To use full height of the page*/
-    height: 100%;
-    margin: 0px;
-    background-color: grey;
+    height: 100vh;
+    background-color: bisque;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.content {
+    display: grid;
+    max-width: 1300px;
+    grid-template-columns: 100px 100px auto;
+    grid-template-rows: 100px 100px auto;
 }
 
 .container {
+    background-color: white;
     display: grid;
-    grid-template-columns: repeat(64,1fr); 
     grid-column-gap: 0px;
-    padding: 25px 25px 25px 25px;
-    border: solid 2px black;
+    border: solid 10px black;
+    grid-column: 3;
+    grid-row: 3;
 }
 
 
 .container-item {
-    background: yellow;
     width: 100%;
     /*Using the padding property to enforce a 1:1 aspect ratio*/
     height: 0;
     padding-top: 100%;
 }
 
-.black {
-    background-color: black;
+.control {
+    grid-column: 3;
+    grid-row: 2;
+    display: flex;
+    height: 50%;
+    padding-top: 25px;
+    justify-content: space-around
+}
+
+button {
+    width: 100px;
+    height: 50px;
+}
+
+#title {
+    font-size: 40px; 
+    grid-column: 3;
+    grid-row:1;
+    height: 50px;
+    text-align: center;
+}
+
+.colour {
+    grid-column-start: 1;
+    grid-column-end: 2; 
+    grid-row: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 50px;
 }
