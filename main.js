@@ -2,7 +2,6 @@
 let n = 32;
 
 // Set the background of container items to whiteS
-
 function resetColor() {
   const cells = document.querySelectorAll('.container-item');
   for (let i = 0; i < cells.length; i++) {
@@ -10,10 +9,22 @@ function resetColor() {
   }
 }
 
+// Object key-value pairs of colours.
+const colors = {
+  black: 'black', red: 'red', green: 'green', blue: 'blue',
+};
+
+let currentColor = '';
+
+function replyClick(clickedId) {
+  currentColor = clickedId;
+}
+
 // An elements background style is changed when the mouse is clicked and moved.
 // Changes are effected by setting isClicked to True.
-
 function draw() {
+  // let currentColor = 'black'
+  // currentColor = reply_click();
   let isClicked = false;
   const cells = document.querySelectorAll('.container-item');
 
@@ -23,7 +34,7 @@ function draw() {
 
   cells.forEach((item) => item.addEventListener('mousemove', (event) => {
     if (isClicked === true) {
-      event.target.style.background = 'black';
+      event.target.style.background = colors[currentColor];
     }
   }));
 
@@ -32,8 +43,8 @@ function draw() {
   }));
 }
 
-// Remove previous child nodes from container
-
+// Remove previous child nodes from container, so creation of new
+// grid starts again from zero.
 function removeChildNodes() {
   const node = document.getElementById('container');
   while (node.firstChild) {
@@ -41,6 +52,7 @@ function removeChildNodes() {
   }
 }
 
+// Main function
 function gridSize() {
   resetColor();
   removeChildNodes();
@@ -48,10 +60,10 @@ function gridSize() {
   // Prompt user to input size of grid, between 16 and 100.
   // Ensure only a number is provided.
   do {
-    n = parseInt(prompt('Enter number between 16 and 100:'), 10);
+    n = parseInt(prompt('Enter a number between 16 and 100 to set grid size:'), 10);
   } while (isNaN(n) || n > 100 || n < 16);
 
-  // Creat and add the required number of divs to the container.
+  // Create and add the required number of divs to the container.
   for (let i = 0; i < n * n; i++) {
     const container = document.getElementById('container');
     container.style.gridTemplateColumns = `repeat(${n},1fr)`;
