@@ -1,6 +1,7 @@
 html, body {
     height: 100vh;
-    background-color: bisque;
+    background: linear-gradient(24deg, rgba(110,165,191,1) 10%,
+     rgba(101,169,196,1) 43%, rgba(0,212,255,1) 95%);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -11,11 +12,11 @@ html, body {
     grid-template-rows: 100px 100px auto;
 }
 
-.container {
+#container {
     background-color: white;
     display: grid;
     grid-column-gap: 0px;
-    border: solid 10px black;
+    border: solid 5px black;
     grid-column: 3;
     grid-row: 3;
 }
@@ -40,6 +41,10 @@ html, body {
 button {
     width: 100px;
     height: 50px;
+    background-color: tomato;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
 }
 
 #title {
@@ -58,4 +63,26 @@ button {
     flex-direction: column;
     justify-content: space-around;
     padding-left: 50px;
+}
+
+#black {
+    background-color: black;
+
+}
+
+#red {
+    background-color:red;
+    
+}
+
+
+#green {
+    background-color: green;
+ 
+    
+}
+
+#blue {
+    background-color:blue;
+    
 }
