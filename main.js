@@ -85,4 +85,5 @@ document.getElementById('instruct').onclick = showMessage;
 
 // Used backticks and \ for multiline string
 const message = `Press START to select the grid size, or to clear the \
- drawing and to reset the gridsize. Choose the colour by clicking the respective button`;
+ drawing and to reset the gridsize. To draw, choose the colour, then left click \
+ and move the mouse inside the canvas. Drawing stops when mouse is no longer being clicked.`;
