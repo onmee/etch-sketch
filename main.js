@@ -85,4 +85,4 @@ document.getElementById('instruct').onclick = showMessage;
 
 // Used backticks and \ for multiline string
 const message = `Press START to select the grid size, or to clear the \
- drawing and to reset the gridsize. Choose the colour by clicking the respective butto`;
+ drawing and to reset the gridsize. Choose the colour by clicking the respective button`;
