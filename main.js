@@ -1,7 +1,7 @@
-// Declare n but leave it undefined
-let n = 32;
+// Declare n but leave it undefined, so that its value is set in gridSize().
+let n;
 
-// Set the background of container items to whiteS
+// Set the background of container items to white to remove previous colours.
 function resetColor() {
   const cells = document.querySelectorAll('.container-item');
   for (let i = 0; i < cells.length; i++) {
@@ -16,6 +16,7 @@ const colors = {
 
 let currentColor = '';
 
+// Change colour it ID of clieck button.
 function replyClick(clickedId) {
   currentColor = clickedId;
 }
@@ -23,8 +24,6 @@ function replyClick(clickedId) {
 // An elements background style is changed when the mouse is clicked and moved.
 // Changes are effected by setting isClicked to True.
 function draw() {
-  // let currentColor = 'black'
-  // currentColor = reply_click();
   let isClicked = false;
   const cells = document.querySelectorAll('.container-item');
 
@@ -74,5 +73,15 @@ function gridSize() {
   draw();
 }
 
-// When START button is clicked, run the gridSize function.
+// When 'START or RESET' button is clicked, run the gridSize function.
 document.getElementById('start').onclick = gridSize;
+
+// Display instructions
+function showMessage() {
+  alert(message);
+}
+
+document.getElementById('instruct').onclick = showMessage;
+
+const message = `Press START to select the grid size, or to clear the \
+ drawing and to reset the gridsize. Choose the colour by clicking the respective buttons.`;
