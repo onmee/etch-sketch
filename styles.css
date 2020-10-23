@@ -64,7 +64,6 @@ button {
     grid-row: 3;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     padding-left: 50px;
 }
 
