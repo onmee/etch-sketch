@@ -16,7 +16,7 @@ const colors = {
 
 let currentColor = '';
 
-// Change colour it ID of clieck button.
+// Set colour to that of clicked button.
 function replyClick(clickedId) {
   currentColor = clickedId;
 }
