@@ -4,7 +4,7 @@ let n;
 // Set the background of container items to white to remove previous colours.
 function resetColor() {
   const cells = document.querySelectorAll('.container-item');
-  for (let i = 0; i < cells.length; i++) {
+  for (let i = 0; i < cells.length; i += 1) {
     cells[i].style.background = 'white';
   }
 }
@@ -63,7 +63,7 @@ function gridSize() {
   } while (isNaN(n) || n > 100 || n < 16);
 
   // Create and add the required number of divs to the container.
-  for (let i = 0; i < n * n; i++) {
+  for (let i = 0; i < n * n; i += 1) {
     const container = document.getElementById('container');
     container.style.gridTemplateColumns = `repeat(${n},1fr)`;
     const div = document.createElement('div');
@@ -76,14 +76,15 @@ function gridSize() {
 // When 'START or RESET' button is clicked, run the gridSize function.
 document.getElementById('start').onclick = gridSize;
 
+// Used backticks and \ for multiline string
+const message = `Press START to select the grid size, or to clear the
+drawing and to reset the gridsize. To draw, choose the colour, then left click and move the mouse 
+inside the canvas. 
+Drawing stops when mouse is no longer being clicked.`;
+
 // Display instructions
 function showMessage() {
   alert(message);
 }
 
 document.getElementById('instruct').onclick = showMessage;
-
-// Used backticks and \ for multiline string
-const message = `Press START to select the grid size, or to clear the \
- drawing and to reset the gridsize. To draw, choose the colour, then left click \
- and move the mouse inside the canvas. Drawing stops when mouse is no longer being clicked.`;
